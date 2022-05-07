@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-rm ./x86_64/*.db ./x86_64/*.files ./x86_64/.tar.zst # Remove all packages
+rm ./x86_64/*.db ./x86_64/*.files ./x86_64/*.tar.zst # Remove all packages
 
 ### Build every packakge and copy it to the x86_64 repo ###
 for dir in pkgbuilds/*/     # list directories in the form "/tmp/dirname/"
