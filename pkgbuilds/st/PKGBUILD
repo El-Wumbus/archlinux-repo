@@ -1,6 +1,7 @@
 # Maintainer: Aidan Neal <squidwardnose4507@gmail.com>
 pkgname='st-decator'
-pkgver=r2.r301784f.
+_pkgname='st'
+pkgver=r7.r93b346e.
 pkgrel=1
 pkgdesc="st is a simple terminal emulator for X which sucks less."
 arch=("x86_64")

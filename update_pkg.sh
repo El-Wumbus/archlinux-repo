@@ -1,18 +1,31 @@
 #!/usr/bin/env bash
+if [ $# -gt 0 ];then 
+    while [[ $# -gt 0 ]]; do
+      case $1 in
+        x86|32)
+        ARCH="x86";;
 
-rm ./x86_64/*.db ./x86_64/*.files ./x86_64/*.tar.zst # Remove all packages
+        x86_64|64)
+          ARCH="x86_64";;
+      esac
+    done
+else
+    ARCH="x86_64"
+fi
 
-### Build every packakge and copy it to the x86_64 repo ###
+rm ./"${ARCH}"/*.db ./"${ARCH}"/*.files ./"${ARCH}"/*.tar.zst # Remove all packages
+
+### Build every packakge and copy it to the repo ###
 for dir in pkgbuilds/*/     # list directories in the form "/tmp/dirname/"
 do     dir=${dir%*/}      # remove the trailing "/"
     cd "${dir}" || exit
     makepkg
-    cp ./*.tar.zst ../../x86_64/
+    cp ./*.tar.zst ../../"${ARCH}"/
     rm -rf pkg src ./*.tar.zst "${dir##*/}"
     cd ../..
 done
 
-cd ./x86_64 || exit
+cd ./"${ARCH}" || exit
 repo-add archlinux-repo.db.tar.gz ./*.tar.zst
 rm archlinux-repo.db
 rm archlinux-repo.files
