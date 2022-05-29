@@ -33,4 +33,5 @@ check() {
 package() {
 	cd "normalize"
   make DESTDIR="$pkgdir/" install
+  rm -rf $pkgdir/usr/local/share/man
 }

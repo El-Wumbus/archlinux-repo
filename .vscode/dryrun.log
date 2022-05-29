@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/mnt/starship-vault/documents/Git/archlinux-repo'
+make: Leaving directory '/mnt/starship-vault/documents/Git/archlinux-repo'
+ 
+make: *** No targets.  Stop.
+

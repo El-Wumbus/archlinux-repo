@@ -1,5 +1,7 @@
 # Maintainer: Tucker Boniface <tucker@boniface.tech>
 # Maintainer: Jguer <joaogg3@gmail.com>
+# Maintainer: Aidan Neal <Squidwardnose4507@gmail.com>
+
 pkgname="yay"
 _pkgname="yay"
 pkgver=11.1.2.r13.g4ca50e5
