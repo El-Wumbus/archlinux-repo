@@ -7,7 +7,7 @@ update: update.sh
 	cp ${ARCH}/* old/
 	./update.sh || rm -rf ${ARCH}/* && cp old/* ${ARCH}/ && rm -rf old; echo "An error occured, no packages were updated"
 
-deploy: update
+deploy:
 	git add . && git commit -m 'updated packages [$(shell date +%s)]' && git push
 
 clean:
