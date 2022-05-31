@@ -27,9 +27,10 @@ done
 
 cd ./"${ARCH}" || exit $?
 repo-add archlinux-repo.db.tar.gz ./*.tar.zst
-rm archlinux-repo.db || exit $?
-rm archlinux-repo.files || exit $?
-cp archlinux-repo.files.tar.gz archlinux-repo.files || exit $?
-cp archlinux-repo.db.tar.gz archlinux-repo.db || exit $?
-rm archlinux-repo.db.tar.gz || exit $?
-rm archlinux-repo.files.tar.gz || exit $?
+rm archlinux-repo.db
+rm archlinux-repo.files
+cp archlinux-repo.files.tar.gz archlinux-repo.files 
+cp archlinux-repo.db.tar.gz archlinux-repo.db 
+rm archlinux-repo.db.tar.gz 
+rm archlinux-repo.files.tar.gz 
+exit 0

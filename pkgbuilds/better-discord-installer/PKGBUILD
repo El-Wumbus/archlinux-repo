@@ -12,7 +12,7 @@ source=("better-discord-installer::git+https://github.com/El-Wumbus/better-disco
 md5sums=("SKIP")
 
 pkgver() {
-	cd "better-discord-instllaer"
+	cd "better-discord-installer"
 	printf "r%s.$s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
