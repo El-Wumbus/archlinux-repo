@@ -1,0 +1,21 @@
+# Maintainer: Aidan Neal <squidwardnose4507@gmail.com>
+pkgname='qa-bin'
+_pkgname='qa'
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="quick archival. A program that allows for single command file compression and simple extraction."
+arch=("x86_64")
+url="https://github.com/El-Wumbus/qa"
+license=("GPL3")
+provides=("qa")
+conflicts=("qa-git")
+makedepends=("git")
+source=("https://github.com/El-Wumbus/qa/releases/download/v${pkgver}/qa_linux_${pkgver}_x86_64" "https://raw.githubusercontent.com/El-Wumbus/qa/Master/README.md")
+sha256sums=('1182b7a3dc31aad9fce9e11112ff60d80a14d5de4bb1fed802afc77e5e681201' 'SKIP')
+
+package() {
+	mkdir -p ${pkgdir}/usr/bin/
+	mkdir -p ${pkgdir}/usr/share/doc
+	install -Dm755 qa_linux_${pkgver}_x86_64 ${pkgdir}/usr/bin/qa
+	install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname"
+}

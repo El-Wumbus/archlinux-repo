@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun May 29 13:19:07 2022
+# Make data base, printed on Sat Jun  4 10:29:42 2022
 
 # Variables
 
@@ -21,15 +19,11 @@ NO_AT_BRIDGE = 1
 # environment
 GTK_RC_FILES = /etc/gtk/gtkrc:/home/decator/.gtkrc:/home/decator/.config/gtkrc
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-5e3bfc57-fbd1-48ef-b960-584ac5a4d4f8.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d4f1fbdc-8162-4760-84da-3a1392812d53.sock
 # environment
-VSCODE_CWD = /mnt/starship-vault/documents/Git/archlinux-repo
-# environment
-WINDOWID = 100663307
+VSCODE_CWD = /home/decator
 # default
 MAKE_COMMAND := make
-# environment
-VSCODE_GIT_ASKPASS_EXTRA_ARGS = --ms-enable-electron-run-as-node
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
@@ -43,7 +37,9 @@ PWD = /mnt/starship-vault/documents/Git/archlinux-repo
 # environment
 MAIL = /var/spool/mail/decator
 # environment
-OLDPWD = /mnt/starship-vault/documents/Git/archlinux-repo/pkgbuilds
+XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
+# environment
+OLDPWD = /home/decator
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
@@ -53,7 +49,7 @@ VSCODE_LOG_STACK = false
 # environment
 VSCODE_CODE_CACHE_PATH = /home/decator/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session2
 # environment
 LANG = C
 # environment
@@ -81,10 +77,6 @@ XDG_CONFIG_DIRS = /home/decator/.config/kdedefaults:/etc/xdg
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
-OMF_PATH = /home/decator/.local/share/omf
-# environment
-GIT_ASKPASS = /opt/visual-studio-code/resources/app/extensions/git/dist/askpass.sh
-# environment
 XCURSOR_THEME = WhiteSur-cursors
 # environment
 XDG_SESSION_DESKTOP = KDE
@@ -95,13 +87,15 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 4492
+VSCODE_PID = 3713
 # environment
 XDG_SESSION_TYPE = x11
+# environment
+CUDA_PATH = /opt/cuda
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/Aidan-PC:@/tmp/.ICE-unix/2814,unix/Aidan-PC:/tmp/.ICE-unix/2814
+SESSION_MANAGER = local/Aidan-PC:@/tmp/.ICE-unix/2704,unix/Aidan-PC:/tmp/.ICE-unix/2704
 # automatic
 *F = $(notdir $*)
 # environment
@@ -119,37 +113,29 @@ SHELL = /bin/sh
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 5
+DOTNET_BUNDLE_EXTRACT_BASE_DIR = /home/decator/.cache/dotnet_bundle_extract
 # environment
-TERMINFO = /usr/lib/kitty/terminfo
+SHLVL = 1
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /home/decator/.cabal/bin:/home/decator/.local/bin:/usr/local/bin:/home/decator/.cabal/bin:/usr/local/sbin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/resolve/bin/:/home/decator/.ghcup/bin:/opt/resolve/bin/:/home/decator/.ghcup/bin
+PATH = /usr/local/sbin:/usr/local/bin:/usr/bin:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin:/home/decator/.dotnet/tools:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin
 # default
 MAKEFILES := 
-# environment
-VSCODE_GIT_IPC_HANDLE = /run/user/1000/vscode-git-22dad4dd94.sock
-# environment
-VSCODE_GIT_ASKPASS_NODE = /opt/visual-studio-code/code
 # environment
 MOTD_SHOWN = pam
 # automatic
 ^F = $(notdir $^)
 # environment
-KCRASH_AUTO_RESTARTED = 1
-# environment
-VSCODE_GIT_ASKPASS_MAIN = /opt/visual-studio-code/resources/app/extensions/git/dist/askpass-main.js
-# environment
 VSCODE_LOG_NATIVE = false
-# environment
-TERM_PROGRAM = vscode
 # automatic
 ?F = $(notdir $?)
 # environment
 KDE_APPLICATIONS_AS_SCOPE = 1
+# makefile (from 'Makefile', line 3)
+tmpdir = "/tmp/${REPONAME}-old"
 # environment
 XDG_SEAT = seat0
 # environment
@@ -169,11 +155,11 @@ LOGNAME = decator
 # environment
 XDG_VTNR = 1
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 2580
-# environment
-KITTY_WINDOW_ID = 1
+SYSTEMD_EXEC_PID = 2563
+# makefile (from 'Makefile', line 1)
+ARCH = "x86_64"
 # environment
 DISPLAY = :0
 # environment
@@ -185,13 +171,11 @@ MAKE_VERSION := 4.3
 # environment
 KDE_SESSION_UID = 1000
 # environment
-KITTY_PID = 120568
-# environment
 _ = /usr/bin/make
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
-# environment
-COLORTERM = truecolor
+# makefile (from 'Makefile', line 2)
+REPONAME = "archlinux-repo"
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -204,8 +188,6 @@ HOME = /home/decator
 ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-a235b190-1.67.2-main.sock
-# environment
-TERM = xterm-256color
 # environment
 XDG_SESSION_ID = 2
 # environment
@@ -227,13 +209,11 @@ KDE_SESSION_VERSION = 5
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
 # environment
-KITTY_INSTALLATION_DIR = /usr/lib/kitty
-# environment
 KDE_FULL_SESSION = true
 # environment
-TERM_PROGRAM_VERSION = 1.67.2
+DOTNET_ROOT = /usr/share/dotnet
 # variable set hash-table stats:
-# Load=110/1024=11%, Rehash=0, Collisions=4/139=3%
+# Load=101/1024=10%, Rehash=0, Collisions=9/145=6%
 
 # Pattern-specific Variable Values
 
@@ -241,9 +221,9 @@ TERM_PROGRAM_VERSION = 1.67.2
 
 # Directories
 
-# . (device 46, inode 40212): 10 files, no impossibilities.
+# . (device 46, inode 14000): 12 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -251,12 +231,55 @@ TERM_PROGRAM_VERSION = 1.67.2
 
 # Files
 
+deploy:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 12):
+	git add . && git commit -m 'updated packages [$(shell date +%s)]' && git push
+
+update: update.sh
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := update
+# automatic
+# * := 
+# automatic
+# < := update.sh
+# automatic
+# + := update.sh
+# automatic
+# % := 
+# automatic
+# ^ := update.sh
+# automatic
+# ? := update.sh
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/22=5%
+#  recipe to execute (from 'Makefile', line 7):
+	mkdir -p ${tmpdir}
+	cp ${ARCH}/* ${tmpdir}/
+	./update.sh || rm -rf ${ARCH}/* && cp ${tmpdir}/* ${ARCH}/ && rm -rf ${tmpdir} && echo "An error occured, no packages were updated"
+
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 13:18:59.77264549
+#  Last modified 2022-05-31 05:09:10.693540776
 #  File has been updated.
 #  Successfully updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 15):
+	rm ./"${ARCH}"/*.db ./"${ARCH}"/*.files ./"${ARCH}"/*.tar.zst # Remove all packages
 
 # Not a target:
 .DEFAULT:
@@ -264,27 +287,43 @@ Makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-all:
+all: update
 #  Command line target.
 #  Implicit rule search has been done.
 #  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/14=0%
+
+# Not a target:
+update.sh:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-05-31 04:59:53.933435787
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=4/1024=0%, Rehash=0, Collisions=0/14=0%
+# Load=8/1024=1%, Rehash=0, Collisions=0/23=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 15 / storage = 131 B / avg = 8 B
-# current buf: size = 8162 B / used = 131 B / count = 15 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 20 / storage = 173 B / avg = 8 B
+# current buf: size = 8162 B / used = 173 B / count = 20 / avg = 8 B
 
-# strcache performance: lookups = 19 / hit rate = 21%
+# strcache performance: lookups = 32 / hit rate = 37%
 # hash-table stats:
-# Load=15/8192=0%, Rehash=0, Collisions=0/19=0%
-# Finished Make data base on Sun May 29 13:19:07 2022
+# Load=20/8192=0%, Rehash=0, Collisions=0/32=0%
+# Finished Make data base on Sat Jun  4 10:29:42 2022
 
  

@@ -1,7 +1,7 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/mnt/starship-vault/documents/Git/archlinux-repo'
-mkdir -p old
-cp "x86_64"/* old/
-./update.sh || rm -rf "x86_64"/* && cp old/* "x86_64"/ && rm -rf old; echo "An error occured, no packages were updated"
+mkdir -p "/tmp/"archlinux-repo"-old"
+cp "x86_64"/* "/tmp/"archlinux-repo"-old"/
+./update.sh || rm -rf "x86_64"/* && cp "/tmp/"archlinux-repo"-old"/* "x86_64"/ && rm -rf "/tmp/"archlinux-repo"-old" && echo "An error occured, no packages were updated"
 make: Leaving directory '/mnt/starship-vault/documents/Git/archlinux-repo'
  

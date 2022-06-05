@@ -1,7 +1,7 @@
 # Maintainer: Aidan Neal <squidwardnose4507@gmail.com>
 pkgname='better-discord-installer'
 pkgver=r10.rdfff7d0.
-pkgrel=1
+pkgrel=2
 pkgdesc="Install better discord easily"
 arch=("x86_64")
 url="https://github.com/El-Wumbus/better-discord-installer"
