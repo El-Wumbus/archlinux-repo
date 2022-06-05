@@ -44,7 +44,8 @@ def backuppackage(pkgdir:str, TEMPDIR:str):
   os.mkdir(backupdir) # make backup directory
   shutil.copy(pkgdir, "backupdir")
 
-def cleanrepo(REPODIR, TEMPDIR):
+def cleanrepo(REPODIR):
+  
   for oldgarbage in glob("*", root_dir=REPODIR):
     try: os.remove(oldgarbage)
     except: ERR(f"Failed to remove {oldgarbage}", 1)
@@ -83,8 +84,6 @@ def makepackage(dir:str):
   shutil.copy(glob("*.tar.zst"))
   os.chdir(STARTINGDIR)
   
-
-
 dirpkgbuild = "pkgbuilds"
 pkgbuild_dirlist = os.listdir(dirpkgbuild)
 
@@ -102,6 +101,15 @@ repobuildtasks = [f"repo {n}" for n in range(1,1)]
 with console.status("[bold green]Building Repo...") as status:
   while repobuildtasks:
     repobuildtask = repobuildtasks.pop(0)
+    cleanrepo(REPODIR, TEMPDIR)
     exitcode = subprocess.call("repo-add archlinux-repo.db.tar.gz ./*.tar.zst")
+    
+    # Fix repo files
+    os.unlink("archlinux-repo.db")
+    os.unlink("archlinux-repo.files")
+    shutil.move(os.path.abspath("archlinux-repo.db.tar.gz"), os.path.join(os.path.abspath("."), "archlinux-repo.db"))
+    shutil.move(os.path.abspath("archlinux-repo.files.tar.gz"), os.path.join(os.path.abspath("."), "archlinux-repo.files"))
+    
     console.log(f"[bold blue]archlinux-repo done")
 os.chdir(STARTINGDIR)
+exit
