@@ -1,6 +1,0 @@
-#!/bin/sh
-
-set -eu
-
-cd "/usr"/share/musikcube/
-exec ./musikcube "$@"
