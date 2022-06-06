@@ -1,7 +1,7 @@
 # Maintainer: Aidan Neal <squidwardnose4507@gmail.com>
 pkgname='qa-git'
 _pkgname='qa'
-pkgver=r4.reb31235.
+pkgver=r9.r7638153.
 pkgrel=1
 pkgdesc="quick archival. A program that allows for single command file compression and simple extraction."
 arch=("x86_64")
@@ -26,5 +26,5 @@ build() {
 
 package() {
 	cd "$_pkgname"
-	sudo make DESTDIR="${pkgdir}" install
+	make DESTDIR="${pkgdir}" install
 }

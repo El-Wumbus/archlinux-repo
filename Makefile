@@ -5,7 +5,7 @@ all: update
 
 update: update.sh
 	mkdir -p ${tmpdir}
-	cp ${ARCH}/* ${tmpdir}/
+	# cp ${ARCH}/* ${tmpdir}/
 	./update.sh || rm -rf ${ARCH}/* && cp ${tmpdir}/* ${ARCH}/ && rm -rf ${tmpdir} && echo "An error occured, no packages were updated"
 
 deploy:

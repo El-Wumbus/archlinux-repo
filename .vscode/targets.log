@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jun  4 10:29:42 2022
+# Make data base, printed on Mon Jun  6 02:12:51 2022
 
 # Variables
 
@@ -19,7 +19,7 @@ NO_AT_BRIDGE = 1
 # environment
 GTK_RC_FILES = /etc/gtk/gtkrc:/home/decator/.gtkrc:/home/decator/.config/gtkrc
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d4f1fbdc-8162-4760-84da-3a1392812d53.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-1b71c580-49aa-4445-8278-5a3e8d545e19.sock
 # environment
 VSCODE_CWD = /home/decator
 # default
@@ -87,7 +87,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 3713
+VSCODE_PID = 476853
 # environment
 XDG_SESSION_TYPE = x11
 # environment
@@ -221,9 +221,9 @@ DOTNET_ROOT = /usr/share/dotnet
 
 # Directories
 
-# . (device 46, inode 14000): 12 files, no impossibilities.
+# . (device 46, inode 14000): 13 files, no impossibilities.
 
-# 12 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -294,13 +294,13 @@ all: update
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
+ 
 # Load=0/32=0%, Rehash=0, Collisions=0/14=0%
 
 # Not a target:
 update.sh:
 #  Implicit rule search has been done.
- 
-#  Last modified 2022-05-31 04:59:53.933435787
+#  Last modified 2022-06-04 23:06:57.668942737
 #  File has been updated.
 #  Successfully updated.
 
@@ -318,12 +318,12 @@ update.sh:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 20 / storage = 173 B / avg = 8 B
-# current buf: size = 8162 B / used = 173 B / count = 20 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 21 / storage = 189 B / avg = 9 B
+# current buf: size = 8162 B / used = 189 B / count = 21 / avg = 9 B
 
-# strcache performance: lookups = 32 / hit rate = 37%
+# strcache performance: lookups = 33 / hit rate = 36%
 # hash-table stats:
-# Load=20/8192=0%, Rehash=0, Collisions=0/32=0%
-# Finished Make data base on Sat Jun  4 10:29:42 2022
+# Load=21/8192=0%, Rehash=0, Collisions=0/33=0%
+# Finished Make data base on Mon Jun  6 02:12:51 2022
 
  

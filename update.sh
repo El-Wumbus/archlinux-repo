@@ -20,7 +20,7 @@ rm ./"${ARCH}"/*.db ./"${ARCH}"/*.files ./"${ARCH}"/*.tar* ./"${ARCH}"/*.deb ./"
 for dir in pkgbuilds/*/     # list directories in the form "/tmp/dirname/"
 do     dir=${dir%*/}      # remove the trailing "/"
     cd "${dir}" || exit $?
-    makepkg || exit $?
+    makepkg
     cp ./*.tar.zst ../../"${ARCH}"/
     sudo rm -rf pkg src ./*.tar* "${dir##*/}" || exit $?
     cd ../.. || exit $?
