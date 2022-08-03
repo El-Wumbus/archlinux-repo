@@ -1,0 +1,23 @@
+pkgname='quickalias'
+_pkgname='qickalias'
+pkgver=r54.r6380bee.
+pkgrel=1
+pkgdesc="This Python script creates pemenant aliases so you don't have to open your shell config file"
+arch=("x86_64")
+url="https://github.com/dCaples/quickalias"
+license=("GPL3")
+provides=("quickalias")
+depends=("python3")
+source=("${_pkgname}::git+https://github.com/dCaples/quickalias")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd ${_pkgname}
+	printf "r%s.$s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+
+package() {
+  cd ${_pkgname}
+  make DESTDIR="${pkgdir}" install
+}

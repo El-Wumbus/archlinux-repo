@@ -1,0 +1,6 @@
+.vscode
+*.deb
+*.7z
+*.gz
+old
+*.log

@@ -1,0 +1,37 @@
+# Maintainer: Aidan Neal <squidwardnose4507@gmail.com>
+pkgname='normalize-git'
+_pkgname='normalize'
+pkgver=r2.rb281d53.
+pkgrel=1
+pkgdesc="an audio file volume normalizer."
+arch=("x86_64")
+url="https://github.com/kklobe/normalize"
+license=("GPLv2")
+makedepends=("git")
+source=("normalize::git+https://github.com/kklobe/normalize")
+md5sums=("SKIP")
+provides=("normalize")
+conflicts=("normalize")
+
+pkgver() {
+	cd "normalize"
+	printf "r%s.$s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+  cd "normalize"
+  ./configure
+  make clean
+  make
+}
+
+check() {
+  cd "normalize"
+  make -k check
+}
+
+package() {
+	cd "normalize"
+  make DESTDIR="$pkgdir/" install
+  rm -rf $pkgdir/usr/local/share/man
+}

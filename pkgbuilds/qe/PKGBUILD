@@ -1,0 +1,27 @@
+# Maintainer: Aidan Neal <squidwardnose4507@gmail.com>
+pkgname='qe'
+pkgver=r15.r7ccba57.
+pkgrel=1
+pkgdesc="quick encryption is a program that encrypts(with 256bit-AES) and decrypts files in a single command by usage of a passphrase."
+arch=("x86_64")
+url="https://github.com/El-Wumbus/qe"
+license=("GPL3")
+provides=("qe")
+makedepends=('python-pip' 'python3')
+source=("qe::git+https://github.com/El-Wumbus/qe.git#branch=Master")
+sha256sums=('SKIP')
+
+pkgver() {
+	cd "$pkgname"
+	printf "r%s.$s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+	cd "$pkgname"
+	pip install -r requirements.txt
+}
+
+package() {
+	cd "$pkgname"
+	make DESTDIR="${pkgdir}" install
+}
