@@ -1,6 +1,5 @@
 # Maintainer: Aidan Neal <decator.c@proton.me>
-pkgname="qinfo-git"
-_pkgname="qinfo"
+pkgname="qinfo"
 pkgver=r19.r1f78cfa.
 pkgrel=1
 pkgdesc="A cross platform system info program. Fetches system info and displays it."
@@ -13,11 +12,11 @@ source=("qinfo"::"git+https://github.com/El-Wumbus/qinfo.git")
 sha256sums=("SKIP")
 
 pkgver() {
-  cd "$_pkgname"
+  cd "$pkgname"
   printf "r%s.$s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 package() {
-  cd "$_pkgname"
+  cd "$pkgname"
   make DESTDIR="${pkgdir}" install
 }
