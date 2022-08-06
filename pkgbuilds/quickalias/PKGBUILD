@@ -1,6 +1,6 @@
 pkgname='quickalias'
 _pkgname='qickalias'
-pkgver=r54.r6380bee.
+pkgver=r55.r081c797.
 pkgrel=1
 pkgdesc="This Python script creates pemenant aliases so you don't have to open your shell config file"
 arch=("x86_64")

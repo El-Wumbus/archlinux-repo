@@ -4,7 +4,7 @@
 
 pkgname="yay"
 _pkgname="yay"
-pkgver=11.2.0.r7.g6f60892
+pkgver=11.2.0.r13.ge2f6125
 pkgrel=1
 pkgdesc="Yet another yogurt. Pacman wrapper and AUR helper written in go. (development version)"
 arch=('i686' 'pentium4' 'x86_64' 'arm' 'armv6h' 'armv7h' 'aarch64')
