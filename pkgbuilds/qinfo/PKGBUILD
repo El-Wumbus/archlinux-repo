@@ -1,6 +1,6 @@
 # Maintainer: Aidan Neal <decator.c@proton.me>
 pkgname="qinfo"
-pkgver=r68.re82bba8.
+pkgver=r69.rd513d25.
 pkgrel=1
 pkgdesc="A cross platform system info program. Fetches system info and displays it."
 arch=("x86_64")
